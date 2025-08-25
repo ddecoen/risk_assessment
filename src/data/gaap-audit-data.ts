@@ -84,8 +84,8 @@ const materialityRisks: RiskFactor[] = [
 const cogsAllocationRisks: RiskFactor[] = [
   {
     id: 'cogs-001',
-    name: 'Incorrect Cost Allocation Methods',
-    description: 'Risk of using inappropriate methods for allocating indirect costs to COGS',
+    name: 'Customer Support Cost Allocation',
+    description: 'Risk of inappropriate allocation of customer support costs across different service lines or customer segments',
     riskLevel: 'High',
     likelihood: 4,
     impact: 4,
@@ -93,9 +93,10 @@ const cogsAllocationRisks: RiskFactor[] = [
     controlEffectiveness: 'Partially Effective',
     residualRisk: 11,
     mitigationActions: [
-      'Review and update cost allocation policies',
-      'Implement activity-based costing where appropriate',
-      'Monthly variance analysis'
+      'Implement time tracking system for customer support staff',
+      'Establish clear allocation methodologies based on service usage metrics',
+      'Monthly review of support cost allocation reasonableness',
+      'Document allocation basis and maintain supporting evidence'
     ],
     owner: 'Cost Accounting Manager',
     dueDate: '2024-12-15',
@@ -103,21 +104,62 @@ const cogsAllocationRisks: RiskFactor[] = [
   },
   {
     id: 'cogs-002',
-    name: 'Inventory Valuation Errors',
-    description: 'Risk of errors in inventory valuation affecting COGS calculations',
+    name: 'Service Delivery Cost Classification',
+    description: 'Risk of misclassifying service delivery costs between COGS and operating expenses',
+    riskLevel: 'Medium',
+    likelihood: 3,
+    impact: 4,
+    inherentRisk: 12,
+    controlEffectiveness: 'Effective',
+    residualRisk: 5,
+    mitigationActions: [
+      'Develop clear cost classification guidelines for service delivery',
+      'Regular training on GAAP cost classification requirements',
+      'Quarterly review of cost classifications with external auditors',
+      'Implement automated controls for common cost classifications'
+    ],
+    owner: 'Controller',
+    dueDate: '2024-11-30',
+    status: 'In Progress'
+  },
+  {
+    id: 'cogs-003',
+    name: 'Third-Party Service Provider Costs',
+    description: 'Risk of improper allocation and timing of third-party service provider costs in COGS calculations',
     riskLevel: 'Medium',
     likelihood: 3,
     impact: 3,
     inherentRisk: 9,
-    controlEffectiveness: 'Effective',
-    residualRisk: 4,
+    controlEffectiveness: 'Partially Effective',
+    residualRisk: 6,
     mitigationActions: [
-      'Quarterly inventory counts',
-      'Automated inventory valuation controls',
-      'Regular review of inventory reserves'
+      'Establish vendor cost tracking and allocation procedures',
+      'Implement accrual processes for third-party service costs',
+      'Monthly reconciliation of vendor invoices to allocated costs',
+      'Review contract terms for proper cost allocation guidance'
     ],
-    owner: 'Inventory Manager',
-    status: 'Completed'
+    owner: 'Accounts Payable Manager',
+    status: 'Not Started'
+  },
+  {
+    id: 'cogs-004',
+    name: 'Employee Time Allocation Accuracy',
+    description: 'Risk of inaccurate time allocation for employees whose costs should be included in COGS versus operating expenses',
+    riskLevel: 'High',
+    likelihood: 4,
+    impact: 3,
+    inherentRisk: 12,
+    controlEffectiveness: 'Partially Effective',
+    residualRisk: 8,
+    mitigationActions: [
+      'Implement comprehensive time tracking system',
+      'Establish clear guidelines for direct vs indirect time allocation',
+      'Regular review and approval of time allocations by managers',
+      'Quarterly analysis of allocation patterns and reasonableness'
+    ],
+    owner: 'HR Director',
+    dueDate: '2024-10-31',
+    status: 'In Progress'
   }
 ];
 
@@ -220,9 +262,9 @@ const riskCategories: RiskCategory[] = [
   {
     id: GAAP_RISK_CATEGORIES.COGS_ALLOCATION,
     name: 'COGS Allocation',
-    description: 'Risks related to proper allocation and calculation of cost of goods sold',
+    description: 'Risks related to proper allocation and classification of service delivery costs, including customer support, employee time, and third-party service provider costs',
     riskFactors: cogsAllocationRisks,
-    overallRiskRating: 'Medium'
+    overallRiskRating: 'High'
   },
   {
     id: GAAP_RISK_CATEGORIES.SEGREGATION_OF_DUTIES,

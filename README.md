@@ -35,9 +35,10 @@ A comprehensive web application for managing and visualizing risk assessments fo
 - Industry benchmarking
 
 ### 3. COGS Allocation
-- Cost allocation methodology risks
-- Inventory valuation accuracy
-- Variance analysis procedures
+- Customer support cost allocation across service lines
+- Service delivery cost classification (COGS vs OpEx)
+- Third-party service provider cost allocation
+- Employee time allocation accuracy
 
 ### 4. Segregation of Duties
 - Financial reporting process controls
